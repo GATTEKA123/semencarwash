@@ -1,0 +1,137 @@
+html { overflow:  hidden; }
+
+.wrapper{
+    position: relative;
+    animation: car 7s infinite;
+}
+
+.carbody{
+    width: 150px;
+    height: 90px;
+    background-color: darkgreen;
+}
+.carbody:after{
+    width:6px;
+    height:50px;
+    -webkit-transform:skew(27deg);
+    -moz-transform:skew(37deg);
+    background:#dc4630;
+    content:'';
+    position:absolute;
+    top:0;
+    left:182px;
+    border-radius:4px 0 4px 4px;
+}
+.carbody:before{
+    width:6px;
+    height:50px;
+    background:#dc4630;
+    content:'';
+    position:absolute;
+    top:0px;
+    left:150px;
+    border-radius:0px 4px 0px 0px;
+
+}
+.carbottom{
+    width:27px;
+    height:6px;
+    background:#dc4630;
+    content:'';
+    position:absolute;
+    top:0px;
+    left:150px;
+    border-radius:0px 4px 0px 0px;
+}
+.carbottom:before{
+
+    width:50px;
+    height:42px;
+    background:#dc4630;
+    content:'';
+    position:absolute;
+    top:48px;
+    left:0px;
+    border-radius:0px 3px 0px 0px;
+}
+.wheelbaseleft{
+    width:40px;
+    height:20px;
+    background:#3d7d3d;
+    content:'';
+    position:absolute;
+    top:70px;
+    left:15px;
+    border-radius:40% 40% 0 0;
+}
+.wheelbaseleft:before{
+    width:30px;
+    height:30px;
+    background:#222222;
+    content:'';
+    position:absolute;
+    top:5px;
+    left:5px;
+    border-radius:50%;
+}
+.wheelbaseleft:after{
+    width:20px;
+    height:20px;
+    background-image: conic-gradient(#000000 16.67%, #ffffff 0 33.33%, #000000 0 50%, #ffffff 0 66.67%, #000000 0 83.33%, #ffffff 0);
+    content:'';
+    position:absolute;
+    top:10px;
+    left:10px;
+    border-radius:50%;
+    animation: wheel 7s infinite;
+}
+.wheelbaseright{
+    width:40px;
+    height:20px;
+    background:#3d7d3d;
+    content:'';
+    position:absolute;
+    top:70px;
+    left:130px;
+    border-radius:40% 40% 0 0;
+}
+.wheelbaseright:before{
+    width:30px;
+    height:30px;
+    background:#222222;
+    content:'';
+    position:absolute;
+    top:5px;
+    left:5px;
+    border-radius:50%;
+}
+.wheelbaseright:after{
+    width:20px;
+    height:20px;
+    background-image: conic-gradient(#000000 16.67%, #ffffff 0 33.33%, #000000 0 50%, #ffffff 0 66.67%, #000000 0 83.33%, #ffffff 0);
+    content:'';
+    position:absolute;
+    top:10px;
+    left:10px;
+    border-radius:50%;
+    animation: wheel 7s infinite;
+}
+.carname{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 40px;
+}
+@keyframes car {
+    0%{
+        left: 0px;
+    }
+
+    100%{
+        left: calc(100% - 225px);
+    }
+}
+@keyframes wheel {
+    100%{
+        transform: rotate(1440deg);
+    }
+}
